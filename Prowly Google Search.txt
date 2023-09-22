@@ -1,12 +1,36 @@
-Titile: Google search using "prowly" keyword [Everyting]
+Scenario: Google search using "prowly" keyword [Everyting]
 
 Given the browser is with Google homepage opened
 When the user enters "prowly" in the searchbar
 Then the links related to the "prowly" are displayed as a result
 
-Title: Google search using "prowly" keyword [Images]
 
-Given the everything search results are displayed
+
+Scenario: Google search using "prowly" keyword [Images]
+
+Given the everything search results for "prowly" keyword are displayed
 When the user clicks "Images" link below search bar
 Then images related to the "prowly" are displayed as a result
 
+
+
+Scenario Outline:  Google search using "prowly" keyword [Everyting & date filter]
+
+Given the everything search results for "prowly" keyword are displayed
+When the user clicks "Tools" option at header of the site
+Then two filters are displayed
+
+When the users click time filter and selects "<time>" frame
+Then the links related to the "prowly" are displayed as a result for only selected time frame
+
+
+Examples: Frames
+| time 		|
+| Past Hour 	|
+| Past 24 hours |
+| Past week     |
+| Past month    |
+| Past year     |
+
+
+Scenario:  Google search using "prowly" keyword [Everyting & date filter - Custom Range]
