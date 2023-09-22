@@ -14,23 +14,32 @@ Then images related to the "prowly" are displayed as a result
 
 
 
-Scenario Outline:  Google search using "prowly" keyword [Everyting & date filter]
+Scenario Outline:  Google search using "prowly" keyword [Everyting & time filter]
 
 Given the everything search results for "prowly" keyword are displayed
 When the user clicks "Tools" option at header of the site
 Then two filters are displayed
 
-When the users click time filter and selects "<time>" frame
-Then the links related to the "prowly" are displayed as a result for only selected time frame
+When the user clicks time filter and selects "<time>" range
+Then the links related to the "prowly" are displayed as a result for only selected time range
 
 
-Examples: Frames
+Examples: Range
 | time 		|
-| Past Hour 	|
+| Past hour 	|
 | Past 24 hours |
 | Past week     |
 | Past month    |
 | Past year     |
 
 
-Scenario:  Google search using "prowly" keyword [Everyting & date filter - Custom Range]
+Scenario:  Google search using "prowly" keyword [Everyting & time filter - Custom Range]
+
+Given the everything search results for "prowly" keyword using time filter are displayed
+When the user clicks click time filter and select "Custom range" option 
+Then "Customised date range" modal is displayed
+
+When the user selects date range and confirms the choice
+Then the links related to the "prowly" are displayed as a result for only selected date range
+
+
