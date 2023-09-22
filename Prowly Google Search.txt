@@ -5,3 +5,8 @@ When the user enters "prowly" in the searchbar
 Then the links related to the "prowly" are displayed as a result
 
 Title: Google search using "prowly" keyword [Images]
+
+Given the everything search results are displayed
+When the user clicks "Images" link below search bar
+Then images related to the "prowly" are displayed as a result
+
