@@ -1,0 +1,7 @@
+Titile: Google search using "prowly" keyword [Everyting]
+
+Given the browser is with Google homepage opened
+When the user enters "prowly" in the searchbar
+Then the links related to the "prowly" are displayed as a result
+
+Title: Google search using "prowly" keyword [Images]
